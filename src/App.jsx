@@ -9,7 +9,7 @@ function App() {
       <GlobalStyle />
       <BrowserRouter
         basename={
-          import.meta.env.DEV ? "/" : "/react-vite-project-template-js/"
+          import.meta.env.DEV ? "/" : "/HairFactory/"
         }
       >
         <Routes>
