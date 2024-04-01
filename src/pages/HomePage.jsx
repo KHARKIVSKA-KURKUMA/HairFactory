@@ -1,20 +1,13 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
+import Header from "../components/HomePage/Header";
 
 const Container = styled.div`
-  background-color: antiquewhite;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  background-color: #efe6dd;
 `;
 const HomePage = () => {
   return (
     <Container>
-      <h1>Home page</h1>
-      <Link to="another">Link to Another Page</Link>
+      <Header />
     </Container>
   );
 };

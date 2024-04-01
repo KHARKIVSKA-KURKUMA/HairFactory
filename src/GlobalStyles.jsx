@@ -1,9 +1,10 @@
 import { createGlobalStyle } from "styled-components";
+import { lightBlack } from "./colors";
 
 export const GlobalStyle = createGlobalStyle`
-/* ---------------------------------- reset --------------------------------- */
   body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  color: ${lightBlack};
   margin: 0;
 }
 
@@ -43,5 +44,9 @@ img {
   height: auto;
 }
 
-  
+button{
+  border: transparent;
+  border-radius: 24px;
+  cursor: pointer;
+}
 `;
