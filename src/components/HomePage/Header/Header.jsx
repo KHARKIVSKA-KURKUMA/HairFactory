@@ -22,7 +22,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const isDesktop = useMediaQuery("(min-width: 1080px)");
+  const isDesktop = useMediaQuery("(min-width: 1200px)");
   const { t } = useTranslation();
   return (
     <>
