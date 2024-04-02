@@ -5,8 +5,8 @@ import {
   lightBlack,
   lightOrange,
   lightRed,
-} from "../../../colors";
-const desktop = " @media screen and (min-width: 1200px)";
+} from "../../../utils/colors";
+import { desktop } from "../../../utils/viewpoints";
 
 export const Container = styled.div`
   display: flex;
@@ -19,33 +19,6 @@ export const Container = styled.div`
   ${desktop} {
     width: 1200px;
     padding: 32px 15px;
-  }
-`;
-
-export const List = styled.ul`
-  display: none;
-  ${desktop} {
-    display: flex;
-    gap: 20px;
-    :nth-last-child(1) {
-      ::after {
-        display: none;
-      }
-    }
-  }
-`;
-
-export const Item = styled.li`
-  position: relative;
-  ::after {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 2px;
-    bottom: 0;
-    right: -12px;
-    background-color: ${lightBlack};
-    border-radius: 25%;
   }
 `;
 
@@ -70,11 +43,8 @@ export const CallBtn = styled.a`
 `;
 
 export const HeaderNavWrap = styled.div`
-  display: none;
-  ${desktop} {
-    display: flex;
-    align-items: center;
-  }
+  display: flex;
+  align-items: center;
 `;
 export const NavList = styled.ul`
   display: flex;
@@ -97,9 +67,6 @@ export const MenuOpenButton = styled.button`
   align-items: center;
   display: flex;
   z-index: 1;
-  ${desktop} {
-    display: none;
-  }
 `;
 
 export const LogoWrap = styled.div`

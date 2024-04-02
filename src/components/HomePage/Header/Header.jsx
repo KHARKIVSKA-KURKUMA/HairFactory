@@ -6,9 +6,7 @@ import {
   Container,
   EnrollInfoHeader,
   HeaderNavWrap,
-  Item,
   Link,
-  List,
   LogoWrap,
   MenuOpenButton,
   Nav,
@@ -18,57 +16,68 @@ import {
 } from "./Header.styled";
 import { useState } from "react";
 import HeaderMobile from "../HeaderMobile/HeaderMobile";
+import LangSwitcher from "../LangSwitcher/LangSwitcher";
+import { useTranslation } from "react-i18next";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const isDesktop = useMediaQuery("(min-width: 1080px)");
+  const { t } = useTranslation();
   return (
     <>
       <Container>
         <LogoWrap>
           <img src={Logo} alt="Logo" />
         </LogoWrap>
-        <List>
-          <Item>
-            <Link>EN</Link>
-          </Item>
-          <Item>
-            <Link>UA</Link>
-          </Item>
-        </List>
-        <HeaderNavWrap>
-          <Nav>
-            <NavList>
-              <NavItem>
-                <Link href="#1">Services</Link>
-              </NavItem>
-              <NavItem>
-                <Link href="#2">Portfolio</Link>
-              </NavItem>
-              <NavItem>
-                <Link href="#3">Reviews</Link>
-              </NavItem>
-              <NavItem>
-                <Link href="#4">Stock</Link>
-              </NavItem>
-              <NavItem>
-                <Link href="#5">Contacts</Link>
-              </NavItem>
-            </NavList>
-          </Nav>
-          <EnrollInfoHeader>
-            <Link href="tel:+380961111111">
-              <StyledPhone />
-              +38 096 111 11 11
-            </Link>
-            <CallBtn href="tel:+380961111111">Call</CallBtn>
-            <AuthBtn type="button">Sign up</AuthBtn>
-          </EnrollInfoHeader>
-        </HeaderNavWrap>
-        <MenuOpenButton type="button" onClick={() => setIsOpen(true)}>
-          <CiMenuBurger size={30} color="#4e4e4e" />
-        </MenuOpenButton>
+        {isDesktop ? (
+          <>
+            <LangSwitcher isDesktop={isDesktop} />
+            <HeaderNavWrap>
+              <Nav>
+                <NavList>
+                  <NavItem>
+                    <Link>{t("home.header.headerList.services")}</Link>
+                  </NavItem>
+                  <NavItem>
+                    <Link href="#2">
+                      {t("home.header.headerList.portfolio")}
+                    </Link>
+                  </NavItem>
+                  <NavItem>
+                    <Link href="#3">{t("home.header.headerList.reviews")}</Link>
+                  </NavItem>
+                  <NavItem>
+                    <Link href="#4">{t("home.header.headerList.stock")}</Link>
+                  </NavItem>
+                  <NavItem>
+                    <Link href="#5">
+                      {t("home.header.headerList.contacts")}
+                    </Link>
+                  </NavItem>
+                </NavList>
+              </Nav>
+              <EnrollInfoHeader>
+                <Link href="tel:+380961111111">
+                  <StyledPhone />
+                  +38 096 111 11 11
+                </Link>
+                <CallBtn href="tel:+380961111111">
+                  {t("home.header.callBtn")}
+                </CallBtn>
+                <AuthBtn type="button">{t("home.header.authBtn")}</AuthBtn>
+              </EnrollInfoHeader>
+            </HeaderNavWrap>
+          </>
+        ) : (
+          <MenuOpenButton type="button" onClick={() => setIsOpen(true)}>
+            <CiMenuBurger size={30} color="#4e4e4e" />
+          </MenuOpenButton>
+        )}
       </Container>
-      {isOpen && <HeaderMobile onClose={() => setIsOpen(false)} />}
+      {isOpen && !isDesktop && (
+        <HeaderMobile onClose={() => setIsOpen(false)} isDesktop={isDesktop} />
+      )}
     </>
   );
 };

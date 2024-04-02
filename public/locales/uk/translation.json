@@ -1,0 +1,15 @@
+{
+  "home": {
+    "header": {
+      "headerList": {
+        "services": "Послуги",
+        "portfolio": "Портфоліо",
+        "reviews": "Відгуки",
+        "stock": "Акції",
+        "contacts": "Контакти"
+      },
+      "callBtn": "Зателефонувати",
+      "authBtn": "Авторизуватись"
+    }
+  }
+}

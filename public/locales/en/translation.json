@@ -1,0 +1,15 @@
+{
+  "home": {
+    "header": {
+      "headerList": {
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "reviews": "Reviews",
+        "stock": "Stock",
+        "contacts": "Contacts"
+      },
+      "callBtn": "Call",
+      "authBtn": "Sign In"
+    }
+  }
+}

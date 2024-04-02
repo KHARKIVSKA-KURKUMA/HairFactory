@@ -4,11 +4,11 @@ import {
   lightBlack,
   lightOrange,
   lightRed,
-} from "../../../colors";
+} from "../../../utils/colors";
 
 export const MenuMobile = styled.div`
   height: 100dvh;
-  width: 100vw;
+  width: 100%;
   position: absolute;
   top: 0;
   background-color: ${desertStorm};
@@ -34,31 +34,6 @@ export const List = styled.ul`
   margin-bottom: 60px;
 `;
 export const Item = styled.li``;
-export const LangList = styled.ul`
-  margin: 40px 0 30px;
-
-  justify-content: center;
-  display: flex;
-  gap: 20px;
-  :nth-last-child(1) {
-    ::after {
-      display: none;
-    }
-  }
-`;
-export const LangItem = styled.li`
-  position: relative;
-  ::after {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 2px;
-    bottom: 0;
-    right: -12px;
-    background-color: ${lightBlack};
-    border-radius: 25%;
-  }
-`;
 export const Link = styled.a`
   color: ${lightBlack};
   font-size: 25px;
@@ -78,7 +53,7 @@ export const CallBtn = styled.a`
   line-height: 1.4;
   background-color: ${lightOrange};
   border-radius: 24px;
-  padding: 10px 20px;
+  padding: 10px 15px;
   min-width: 120px;
   display: flex;
   align-items: center;
@@ -86,7 +61,7 @@ export const CallBtn = styled.a`
 `;
 
 export const AuthBtn = styled.button`
-  padding: 10px 20px;
+  padding: 10px 15px;
   font-size: 15px;
   line-height: 1.4;
   background-color: ${lightRed};
