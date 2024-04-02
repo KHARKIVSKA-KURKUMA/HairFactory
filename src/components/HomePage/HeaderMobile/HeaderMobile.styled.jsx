@@ -7,7 +7,7 @@ import {
 } from "../../../colors";
 
 export const MenuMobile = styled.div`
-  height: 100vh;
+  height: 100dvh;
   width: 100vw;
   position: absolute;
   top: 0;
@@ -16,7 +16,7 @@ export const MenuMobile = styled.div`
 `;
 
 export const MenuContainer = styled.div`
-  padding: 20px 0px;
+  padding: 50px 0px;
   position: relative;
 `;
 
@@ -31,11 +31,12 @@ export const List = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 60px;
 `;
 export const Item = styled.li``;
 export const LangList = styled.ul`
-  margin-top: 40px;
-  margin-bottom: 20px;
+  margin: 40px 0 30px;
+
   justify-content: center;
   display: flex;
   gap: 20px;
@@ -67,7 +68,6 @@ export const Nav = styled.nav``;
 export const EnrollInfoHeader = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 15px;
   gap: 10px;
 `;
 
