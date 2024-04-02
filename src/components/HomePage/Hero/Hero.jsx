@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {
   desktop,
+  hugeDesktop,
   phone,
   smallDesktop,
   tablet,
@@ -134,6 +135,9 @@ const StarRight = styled.img`
     top: 0;
     transform: translateY(0px);
   }
+  ${hugeDesktop} {
+    transform: translateX(120px);
+  }
 `;
 const StarLeft = styled.img`
   display: none;
@@ -143,6 +147,9 @@ const StarLeft = styled.img`
     bottom: 0;
     left: 0;
     transform: translateY(150px);
+  }
+  ${hugeDesktop} {
+    transform: translateX(-120px);
   }
 `;
 
