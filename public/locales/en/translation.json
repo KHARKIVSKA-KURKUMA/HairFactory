@@ -15,6 +15,12 @@
       "title": "50% discount on women's haircuts!",
       "descr": "Price includes haircut, wash and styling",
       "button": "More"
+    },
+    "summary": {
+      "customer": "Customers enjoy our services again",
+      "feedback": "Positive feedback",
+      "client": "Satisfied customers",
+      "server": "Customers served daily"
     }
   }
 }
