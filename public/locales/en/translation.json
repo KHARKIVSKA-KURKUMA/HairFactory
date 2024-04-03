@@ -21,6 +21,9 @@
       "feedback": "Positive feedback",
       "client": "Satisfied customers",
       "server": "Customers served daily"
+    },
+    "portfolio": {
+      "title": "Beautiful images available to everyone!"
     }
   }
 }
