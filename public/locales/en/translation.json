@@ -24,6 +24,10 @@
     },
     "portfolio": {
       "title": "Beautiful images available to everyone!"
+    },
+    "services": {
+      "title": "Services",
+      "descr": "We only work with hair, but we do it amazingly well"
     }
   }
 }
