@@ -27,7 +27,7 @@ const Title = styled.h2`
   margin-bottom: 15px;
   font-weight: 400;
   font-size: 60px;
-  line-height: 0%.85;
+  line-height: 0.85;
   ${phone} {
     font-size: 72px;
   }
