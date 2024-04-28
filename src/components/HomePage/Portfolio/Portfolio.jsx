@@ -4,11 +4,11 @@ import Portfolio2 from "../../../img/portfolio-2.jpg";
 import Portfolio3 from "../../../img/portfolio-3.jpg";
 import Portfolio4 from "../../../img/portfolio-4.webp";
 import Portfolio5 from "../../../img/portfolio-5.jpg";
-import Portfolio6 from "../../../img/portfolio-6.webp";
+import Portfolio6 from "../../../img/portfolio-6.jpg";
 import Portfolio7 from "../../../img/portfolio-7.jpg";
 import Portfolio8 from "../../../img/portfolio-8.jpg";
 import PortfolioC1 from "../../../img/portfolio-center.jpg";
-import PortfolioC2 from "../../../img/portfolio-center.webp";
+import PortfolioC2 from "../../../img/portfolio-center1.jpg";
 import {
   Container,
   Wrap,
