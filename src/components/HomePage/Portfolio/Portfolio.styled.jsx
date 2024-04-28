@@ -19,6 +19,7 @@ const Wrap = styled.div`
 const CenterImg = styled.img`
   border-radius: 24px;
   height: 550px;
+
   ${hugeDesktop} {
     height: 100%;
   }

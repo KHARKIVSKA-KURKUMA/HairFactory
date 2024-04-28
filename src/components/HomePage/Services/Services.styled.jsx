@@ -1,62 +1,23 @@
 import styled from "styled-components";
-import {
-  desktop,
-  phone,
-  smallDesktop,
-  tablet,
-} from "../../../utils/viewpoints";
+import { hugeDesktop, phone, tablet } from "../../../utils/viewpoints";
 import { lightGreenC } from "../../../utils/colors";
 
-const Wrap = styled.div`
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  flex-wrap: wrap;
-  ${smallDesktop} {
-    flex-wrap: nowrap;
-  }
-`;
-const CenterImg = styled.img`
-  border-radius: 24px;
-  width: calc(100% - 30px);
-  ${tablet} {
-    max-width: 245px;
-    height: 296px;
-  }
-  ${smallDesktop} {
-    max-width: 350px;
-    height: 446px;
-  }
-  ${desktop} {
-    width: 398px;
-  }
-`;
-const SideWrap = styled.div`
-  display: flex;
-  gap: 16px;
-  flex-direction: column;
-  align-items: center;
-  img {
-    width: calc(100% - 30px);
-    border-radius: 24px;
-    ${tablet} {
-      width: 245px;
-      height: 140px;
-    }
-    ${smallDesktop} {
-      width: 350px;
-      height: 215px;
-    }
-    ${desktop} {
-      width: 370px;
-    }
-  }
-`;
 const Container = styled.div`
   padding-top: 30px;
   padding-bottom: 20px;
   ${tablet} {
     padding: 60px 0;
+  }
+  img {
+    height: 400px;
+    margin: 0 auto;
+    border-radius: 24px;
+    ${tablet} {
+      height: 500px;
+    }
+    ${hugeDesktop} {
+      height: 650px;
+    }
   }
 `;
 const Title = styled.h2`
@@ -85,4 +46,4 @@ const Desc = styled.p`
   }
 `;
 
-export { Desc, Title, Wrap, CenterImg, Container, SideWrap };
+export { Desc, Title, Container };
