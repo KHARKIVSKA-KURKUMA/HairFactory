@@ -22,7 +22,7 @@ const Services = () => {
         ssr={true}
         infinite={true}
         autoPlay={true}
-        autoPlaySpeed={1000}
+        autoPlaySpeed={2000}
         customTransition="all .5"
         transitionDuration={500}
         containerClass="carousel-container"
