@@ -1,11 +1,14 @@
 import styled from "styled-components";
-import { desktop, smallDesktop, tablet } from "../../../utils/viewpoints";
+import { hugeDesktop, smallDesktop, tablet } from "../../../utils/viewpoints";
 
 const Container = styled.div`
   display: none;
   ${tablet} {
     display: block;
     padding: 64px 0;
+  }
+  .react-multi-carousel-track {
+    gap: 20px;
   }
 `;
 const Wrap = styled.div`
@@ -15,31 +18,23 @@ const Wrap = styled.div`
 `;
 const CenterImg = styled.img`
   border-radius: 24px;
-  max-width: 245px;
-  height: 296px;
-  ${smallDesktop} {
-    max-width: 350px;
-    height: 446px;
-  }
-  ${desktop} {
-    width: 398px;
+  height: 550px;
+  ${hugeDesktop} {
+    height: 100%;
   }
 `;
 const SideWrap = styled.div`
   display: flex;
   gap: 16px;
   flex-direction: column;
+  height: 550px;
+  justify-content: space-between;
   img {
     border-radius: 24px;
-    width: 245px;
-    height: 140px;
-    ${smallDesktop} {
-      width: 350px;
-      height: 215px;
-    }
-    ${desktop} {
-      width: 370px;
-    }
+    width: calc(100%);
+  }
+  ${hugeDesktop} {
+    height: 100%;
   }
 `;
 const Title = styled.h2`
