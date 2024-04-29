@@ -6,6 +6,7 @@ import { bgColor, desertStorm } from "../utils/colors";
 import Services from "../components/HomePage/Services";
 import Portfolio from "../components/HomePage/Portfolio";
 import Prices from "../components/HomePage/Prices";
+import Team from "../components/HomePage/Team";
 
 const Container = styled.div`
   background-color: ${desertStorm};
@@ -26,6 +27,7 @@ const HomePage = () => {
       <Container>
         <Services />
         <Prices />
+        <Team />
       </Container>
       <LightContainer>
         <Portfolio />

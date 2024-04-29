@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { lightBlack } from "./utils/colors";
+import { lightBlack, lightGreenC } from "./utils/colors";
 
 export const GlobalStyle = createGlobalStyle`
   body {
@@ -49,4 +49,21 @@ button{
   border-radius: 24px;
   cursor: pointer;
 }
+
+.react-multi-carousel-dot-list {
+  bottom: 0;
+  .react-multi-carousel-dot  {
+    button{
+      background-color: #d6d6d6;
+      border: none;
+    }
+  }
+  .react-multi-carousel-dot--active {
+  button{
+  background-color: ${lightGreenC};
+  border: none;
+    }
+  }
+}
+
 `;

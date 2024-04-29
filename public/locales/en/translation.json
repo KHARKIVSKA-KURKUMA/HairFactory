@@ -47,6 +47,14 @@
         "highlighting": "Highlighting (balayage, ombre)",
         "coloring": "Creative coloring"
       }
+    },
+    "team": {
+      "title": "Our masters",
+      "descr": "Hairdressers-colorists with 10+ years of experience",
+      "ksenia": "Ksenia Boltushkina",
+      "natasha": "Natasha Uglova",
+      "violetta": "Violetta Shurygina",
+      "profecion": "Hairdressing technologist"
     }
   }
 }
