@@ -28,6 +28,25 @@
     "services": {
       "title": "Services",
       "descr": "We only work with hair, but we do it amazingly well"
+    },
+    "price": {
+      "title": "Price",
+      "servicesType": {
+        "haircut": "Haircut",
+        "modeling": "Modeling",
+        "dyeing": "Hair dyeing"
+      },
+      "procedure": {
+        "femaleModel": "Female model",
+        "hotScissors": "Hot scissors",
+        "restoration": "Olaplex hair restoration",
+        "hairstyle": "Evening / Wedding hairstyle",
+        "curls": "Hollywood curls",
+        "trick": "The trick is classic",
+        "perm": "Bio-perm 'Mossa'",
+        "highlighting": "Highlighting (balayage, ombre)",
+        "coloring": "Creative coloring"
+      }
     }
   }
 }

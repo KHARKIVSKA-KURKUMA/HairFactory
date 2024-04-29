@@ -1,41 +1,52 @@
+import { useTranslation } from "react-i18next";
 import PriceComponent from "./PriceComponent";
 import { Container, Title } from "./Prices.styled";
 
 const Prices = () => {
+  const { t } = useTranslation();
   return (
     <Container>
-      <Title>Price</Title>
+      <Title>{t("home.price.title")}</Title>
       <PriceComponent
-        serviceType="Haircut"
+        serviceType={t("home.price.servicesType.haircut")}
         items={[
           {
-            type: "Female model",
+            type: t("home.price.procedure.femaleModel"),
             price: "700-1000 UAH",
           },
           {
-            type: "Hot scissors",
+            type: t("home.price.procedure.hotScissors"),
             price: "450-700 UAH",
           },
           {
-            type: "Olaplex hair restoration",
+            type: t("home.price.procedure.restoration"),
             price: "from 1900 UAH",
           },
         ]}
       />
       <PriceComponent
-        serviceType="Modeling"
+        serviceType={t("home.price.servicesType.modeling")}
         items={[
-          { type: "Evening / Wedding hairstyle", price: "1000-1500 UAH" },
-          { type: "Hollywood curls", price: "450-700 UAH" },
-          { type: "The trick is classic", price: "700-1000 UAH" },
+          {
+            type: t("home.price.procedure.hairstyle"),
+            price: "1000-1500 UAH",
+          },
+          { type: t("home.price.procedure.curls"), price: "450-700 UAH" },
+          {
+            type: t("home.price.procedure.trick"),
+            price: "700-1000 UAH",
+          },
         ]}
       />
       <PriceComponent
-        serviceType="Hair dyeing"
+        serviceType={t("home.price.servicesType.dyeing")}
         items={[
-          { type: 'Bio-perm "Mossa"', price: "2000-2500 UAH" },
-          { type: "Highlighting (balayage, ombre)", price: "1500-1700 UAH" },
-          { type: "Creative coloring", price: "1700-2000 UAH" },
+          { type: t("home.price.procedure.perm"), price: "2000-2500 UAH" },
+          {
+            type: t("home.price.procedure.highlighting"),
+            price: "1500-1700 UAH",
+          },
+          { type: t("home.price.procedure.coloring"), price: "1700-2000 UAH" },
         ]}
       />
     </Container>
