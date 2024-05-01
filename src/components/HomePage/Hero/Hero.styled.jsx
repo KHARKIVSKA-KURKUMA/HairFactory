@@ -75,6 +75,14 @@ const PictureHolder = styled.div`
   background-color: ${lightYellow};
   position: relative;
   border-radius: 50%;
+  ${phone} {
+    width: 400px;
+    height: 400px;
+  }
+  ${tablet} {
+    width: 300px;
+    height: 300px;
+  }
   ${smallDesktop} {
     width: 500px;
     height: 500px;
@@ -85,11 +93,19 @@ const Picture = styled.img`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 220px;
+  ${phone} {
+    width: 210px;
+    height: auto;
+  }
+  ${tablet} {
+    width: 180px;
+    height: 220px;
+  }
   ${smallDesktop} {
-    width: 350px;
-    height: 350px;
+    width: 270px;
+    height: auto;
   }
 `;
 const Description = styled.p`
