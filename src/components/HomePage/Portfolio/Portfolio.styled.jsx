@@ -1,11 +1,19 @@
 import styled from "styled-components";
-import { hugeDesktop, smallDesktop, tablet } from "../../../utils/viewpoints";
+import {
+  desktop,
+  hugeDesktop,
+  smallDesktop,
+  tablet,
+} from "../../../utils/viewpoints";
 
 const Container = styled.div`
   display: none;
   ${tablet} {
     display: block;
-    padding: 64px 0;
+    padding: 64px 20px;
+  }
+  ${desktop} {
+    padding: 64px 60px;
   }
   .react-multi-carousel-track {
     gap: 20px;

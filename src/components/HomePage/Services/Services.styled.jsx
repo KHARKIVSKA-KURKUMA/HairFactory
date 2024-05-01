@@ -3,13 +3,11 @@ import { hugeDesktop, phone, tablet } from "../../../utils/viewpoints";
 import { lightGreenC } from "../../../utils/colors";
 
 const Container = styled.div`
-  padding-top: 30px;
-  padding-bottom: 20px;
+  padding: 30px 40px 20px 40px;
   ${tablet} {
-    padding: 60px 0;
+    padding: 40px 20px;
   }
   img {
-    height: 400px;
     margin: 0 auto;
     border-radius: 24px;
     ${tablet} {

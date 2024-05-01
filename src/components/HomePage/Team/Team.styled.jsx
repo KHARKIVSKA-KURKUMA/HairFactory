@@ -6,7 +6,7 @@ const Container = styled.div`
   padding-bottom: 100px;
   position: relative;
   padding-top: 64px;
-  padding: 64px 10px 100px;
+  padding: 64px 10px 60px;
   ${phone} {
     padding: 64px 40px 100px;
   }

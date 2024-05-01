@@ -4,13 +4,15 @@ import Background from "../../../img/priceBg.png";
 import { bgGradient, lightBlack } from "../../../utils/colors";
 
 const Container = styled.div`
-  padding-top: 40px;
   background-image: ${bgGradient}, url(${Background});
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   margin: 0 auto;
-  padding-bottom: 64px;
+  padding: 40px 5px 64px 0px;
+  ${phone} {
+    padding: 40px 20px 64px 20px;
+  }
   ${desktop} {
     max-width: 100%;
     height: 100%;
