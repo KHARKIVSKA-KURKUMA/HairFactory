@@ -8,6 +8,7 @@ import {
 
 const Container = styled.div`
   display: none;
+  position: relative;
   ${tablet} {
     display: block;
     padding: 64px 20px;
@@ -17,6 +18,9 @@ const Container = styled.div`
   }
   .react-multi-carousel-track {
     gap: 20px;
+  }
+  .react-multi-carousel-dot-list {
+    bottom: 30px;
   }
 `;
 const Wrap = styled.div`

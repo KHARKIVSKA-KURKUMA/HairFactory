@@ -34,6 +34,7 @@ const Portfolio = () => {
         containerClass="carousel-container"
         arrows={false}
         dotListClass="custom-dot-list-style"
+        renderDotsOutside={true}
       >
         <SideWrap>
           <img src={Portfolio1} alt="Portfolio1" />
