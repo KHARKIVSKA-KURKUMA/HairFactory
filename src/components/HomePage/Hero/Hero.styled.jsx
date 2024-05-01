@@ -15,7 +15,7 @@ import {
 
 const Container = styled.div`
   width: 100%;
-  padding: 15px 0 0;
+  padding: 15px 0px 30px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
