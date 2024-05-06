@@ -19,7 +19,7 @@ import { useTranslation } from "react-i18next";
 const Reviews = () => {
   const { t } = useTranslation();
   return (
-    <Container>
+    <Container id="reviews">
       <Title>{t("home.review.title")}</Title>
       <Carousel
         swipeable={false}

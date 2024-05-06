@@ -11,7 +11,7 @@ import { responsive } from "../../../utils/carouselResponsives";
 const Services = () => {
   const { t } = useTranslation();
   return (
-    <Container>
+    <Container id="service">
       <Title>{t("home.services.title")}</Title>
       <Desc>{t("home.services.descr")}</Desc>
       <Carousel

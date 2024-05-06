@@ -5,7 +5,7 @@ import { Container, Title } from "./Prices.styled";
 const Prices = () => {
   const { t } = useTranslation();
   return (
-    <Container>
+    <Container id="stock">
       <Title>{t("home.price.title")}</Title>
       <PriceComponent
         serviceType={t("home.price.servicesType.haircut")}

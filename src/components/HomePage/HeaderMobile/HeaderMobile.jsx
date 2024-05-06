@@ -24,21 +24,27 @@ const HeaderMobile = ({ onClose, isDesktop }) => {
         </CloseButton>
         <LangSwitcher isDesktop={isDesktop} />
         <Nav>
-          <List>
+          <List onClick={onClose}>
             <Item>
-              <Link>{t("home.header.headerList.services")}</Link>
+              <Link href="#service">
+                {t("home.header.headerList.services")}
+              </Link>
             </Item>
             <Item>
-              <Link href="#2">{t("home.header.headerList.portfolio")}</Link>
+              <Link href="#portfolio">
+                {t("home.header.headerList.portfolio")}
+              </Link>
             </Item>
             <Item>
-              <Link href="#3">{t("home.header.headerList.reviews")}</Link>
+              <Link href="#reviews">{t("home.header.headerList.reviews")}</Link>
             </Item>
             <Item>
-              <Link href="#4">{t("home.header.headerList.stock")}</Link>
+              <Link href="#stock">{t("home.header.headerList.stock")}</Link>
             </Item>
             <Item>
-              <Link href="#5">{t("home.header.headerList.contacts")}</Link>
+              <Link href="#contacts">
+                {t("home.header.headerList.contacts")}
+              </Link>
             </Item>
           </List>
         </Nav>

@@ -27,7 +27,7 @@ import { useTranslation } from "react-i18next";
 const Footer = () => {
   const { t } = useTranslation();
   return (
-    <Container>
+    <Container id="contacts">
       <Wrap>
         <Title>{t("home.footer.title")}</Title>
         <Address>

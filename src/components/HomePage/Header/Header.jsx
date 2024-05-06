@@ -37,21 +37,27 @@ const Header = () => {
               <Nav>
                 <NavList>
                   <NavItem>
-                    <Link>{t("home.header.headerList.services")}</Link>
+                    <Link href="#service">
+                      {t("home.header.headerList.services")}
+                    </Link>
                   </NavItem>
                   <NavItem>
-                    <Link href="#2">
+                    <Link href="#portfolio">
                       {t("home.header.headerList.portfolio")}
                     </Link>
                   </NavItem>
                   <NavItem>
-                    <Link href="#3">{t("home.header.headerList.reviews")}</Link>
+                    <Link href="#reviews">
+                      {t("home.header.headerList.reviews")}
+                    </Link>
                   </NavItem>
                   <NavItem>
-                    <Link href="#4">{t("home.header.headerList.stock")}</Link>
+                    <Link href="#stock">
+                      {t("home.header.headerList.stock")}
+                    </Link>
                   </NavItem>
                   <NavItem>
-                    <Link href="#5">
+                    <Link href="#contacts">
                       {t("home.header.headerList.contacts")}
                     </Link>
                   </NavItem>
