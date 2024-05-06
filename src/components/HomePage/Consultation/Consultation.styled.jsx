@@ -67,7 +67,7 @@ const Star = styled.img`
     display: block;
     position: absolute;
     right: -55px;
-    top: 105px;
+    top: 80px;
     z-index: 1;
   }
 `;
