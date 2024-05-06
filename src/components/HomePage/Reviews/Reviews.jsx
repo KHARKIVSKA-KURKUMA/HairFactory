@@ -1,7 +1,7 @@
-import UserPic1 from "../../../img/userpic.png";
-import UserPic2 from "../../../img/userpic2.png";
-import UserPic3 from "../../../img/userpic3.png";
-import UserPic4 from "../../../img/userpic4.png";
+import UserPic1 from "../../../img/review/userpic.png";
+import UserPic2 from "../../../img/review/userpic2.png";
+import UserPic3 from "../../../img/review/userpic3.png";
+import UserPic4 from "../../../img/review/userpic4.png";
 import Carousel from "react-multi-carousel";
 import { responsive } from "../../../utils/carouselResponsives";
 import {

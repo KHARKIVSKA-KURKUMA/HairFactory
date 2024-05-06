@@ -57,6 +57,10 @@ const Wrap = styled.div`
     padding: 12px;
     align-items: center;
   }
+  ${desktop} {
+    padding: 32px;
+    align-items: flex-start;
+  }
 `;
 const UserPic = styled.img`
   width: 150px;
