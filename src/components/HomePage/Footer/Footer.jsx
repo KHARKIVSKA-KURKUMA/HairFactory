@@ -22,38 +22,40 @@ import {
   Link,
   Address,
 } from "./Footer.styled";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <Container>
       <Wrap>
-        <Title>Our contacts</Title>
+        <Title>{t("home.footer.title")}</Title>
         <Address>
-          <Desk>c. Kyiv</Desk>
+          <Desk>{t("home.footer.city")}</Desk>
           <Details>
             <IoLocationOutline size={25} />
-            Lesya Ukrainka avenue, 26
+            {t("home.footer.address")}
           </Details>
           <ul>
             <li>
-              <Desk>Mail</Desk>
+              <Desk>{t("home.footer.mail")}</Desk>
               <Link href="mailto:info@example.com">
                 <BsEnvelopeOpen size={20} />
                 info@example.com
               </Link>
             </li>
             <li>
-              <Desk>Number</Desk>
+              <Desk>{t("home.footer.number")}</Desk>
               <Link href="tel:+380991111111">
                 <FaPhone size={20} />
                 +38 099 111 11 11
               </Link>
             </li>
           </ul>
-          <Desk>Working mode</Desk>
+          <Desk>{t("home.footer.mode")}</Desk>
           <Details>
             <CiClock1 size={25} />
-            Mon-Sun from 9:00 to 23:00
+            {t("home.footer.time")}
           </Details>
         </Address>
         <SocialList>

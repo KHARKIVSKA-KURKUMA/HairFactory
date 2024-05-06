@@ -72,6 +72,15 @@
       "phone": "Phone",
       "name": "Name",
       "field": "Your question"
+    },
+    "footer": {
+      "title": "Our contacts",
+      "city": "c. Kharkiv",
+      "address": " Chkalova St, 17",
+      "number": "Number",
+      "mail": "Mail",
+      "mode": "Working mode",
+      "time": "Mon-Sun from 9:00 to 23:00"
     }
   }
 }
