@@ -9,6 +9,7 @@ import Prices from "../components/HomePage/Prices";
 import Team from "../components/HomePage/Team";
 import Reviews from "../components/HomePage/Reviews";
 import Consultation from "../components/HomePage/Consultation";
+import Footer from "../components/HomePage/Footer";
 
 const Container = styled.div`
   background-color: ${desertStorm};
@@ -37,6 +38,7 @@ const HomePage = () => {
       </LightContainer>
       <Container>
         <Consultation />
+        <Footer />
       </Container>
     </>
   );

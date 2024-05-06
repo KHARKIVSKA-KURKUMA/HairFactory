@@ -97,6 +97,7 @@ const Form = styled.form`
 
   .css-dpjnhs-MuiInputBase-root-MuiOutlinedInput-root {
     width: 100%;
+    transition: 500ms border linear;
     ${desktop} {
       width: 550px;
     }
