@@ -55,6 +55,15 @@
       "natasha": "Natasha Uglova",
       "violetta": "Violetta Shurygina",
       "profecion": "Hairdressing technologist"
+    },
+    "review": {
+      "title": "What they say about our work",
+      "coloring": "Coloring",
+      "extension": "Extension",
+      "rew1": "Girls are so smart, I love you so much!",
+      "rew2": "For the first time I was so pleased with the service",
+      "rew3": "I became like a fairy",
+      "rew4": "My hair is now shiny!"
     }
   }
 }

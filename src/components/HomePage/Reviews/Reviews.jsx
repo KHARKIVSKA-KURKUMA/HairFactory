@@ -14,11 +14,13 @@ import {
   UserPic,
   About,
 } from "./Reviews.styled";
+import { useTranslation } from "react-i18next";
 
 const Reviews = () => {
+  const { t } = useTranslation();
   return (
     <Container>
-      <Title>What they say about our work</Title>
+      <Title>{t("home.review.title")}</Title>
       <Carousel
         swipeable={false}
         draggable={false}
@@ -39,33 +41,41 @@ const Reviews = () => {
         <Wrap>
           <UserPic src={UserPic1} />
           <About>
-            <ServiceType type={"coloring"}>Coloring</ServiceType>
+            <ServiceType type={"coloring"}>
+              {t("home.review.coloring")}
+            </ServiceType>
             <Name>Khenia S.</Name>
-            <Text>Girls are so smart, I love you so much!</Text>
+            <Text>{t("home.review.rew1")}</Text>
           </About>
         </Wrap>
         <Wrap>
           <UserPic src={UserPic2} />
           <About>
-            <ServiceType type={"extension"}>Extension</ServiceType>
+            <ServiceType type={"extension"}>
+              {t("home.review.extension")}
+            </ServiceType>
             <Name>Maria M.</Name>
-            <Text>For the first time I was so pleased with the service</Text>
+            <Text>{t("home.review.rew2")}</Text>
           </About>
         </Wrap>
         <Wrap>
           <UserPic src={UserPic3} />
           <About>
-            <ServiceType type={"coloring"}>Coloring</ServiceType>
+            <ServiceType type={"coloring"}>
+              {t("home.review.coloring")}
+            </ServiceType>
             <Name>Khenia B.</Name>
-            <Text>I became like a fairy</Text>
+            <Text>{t("home.review.rew3")}</Text>
           </About>
         </Wrap>
         <Wrap>
           <UserPic src={UserPic4} />
           <About>
-            <ServiceType type={"extension"}>Extension</ServiceType>
+            <ServiceType type={"extension"}>
+              {t("home.review.extension")}
+            </ServiceType>
             <Name>Maria B.</Name>
-            <Text>My hair is now shiny!</Text>
+            <Text>{t("home.review.rew4")}</Text>
           </About>
         </Wrap>
       </Carousel>
