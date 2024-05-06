@@ -11,7 +11,7 @@ const Container = styled.div`
   position: relative;
   ${tablet} {
     display: block;
-    padding: 64px 20px;
+    padding: 44px 20px;
   }
   ${desktop} {
     padding: 64px 60px;
