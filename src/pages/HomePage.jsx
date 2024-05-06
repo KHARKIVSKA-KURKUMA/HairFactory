@@ -10,6 +10,7 @@ import Team from "../components/HomePage/Team";
 import Reviews from "../components/HomePage/Reviews";
 import Consultation from "../components/HomePage/Consultation";
 import Footer from "../components/HomePage/Footer";
+import UpButton from "../components/HomePage/UpButton";
 
 const Container = styled.div`
   background-color: ${desertStorm};
@@ -40,6 +41,7 @@ const HomePage = () => {
         <Consultation />
         <Footer />
       </Container>
+      <UpButton />
     </>
   );
 };
