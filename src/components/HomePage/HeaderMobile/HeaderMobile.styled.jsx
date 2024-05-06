@@ -32,6 +32,7 @@ export const List = styled.ul`
   flex-direction: column;
   align-items: center;
   margin-bottom: 60px;
+  gap: 10px;
 `;
 export const Item = styled.li``;
 export const Link = styled.a`
