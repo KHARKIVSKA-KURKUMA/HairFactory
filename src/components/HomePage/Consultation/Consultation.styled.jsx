@@ -29,7 +29,6 @@ const Img = styled.img`
   border: 5px solid ${lightGreenC};
   ${desktop} {
     width: 500px;
-    height: 500px;
   }
 `;
 const Title = styled.h2`
