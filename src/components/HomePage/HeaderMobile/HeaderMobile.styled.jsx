@@ -5,6 +5,7 @@ import {
   lightOrange,
   lightRed,
 } from "../../../utils/colors";
+import { Link } from "react-router-dom";
 
 export const MenuMobile = styled.div`
   height: 100dvh;
@@ -35,7 +36,7 @@ export const List = styled.ul`
   gap: 10px;
 `;
 export const Item = styled.li``;
-export const Link = styled.a`
+export const LinkS = styled.a`
   color: ${lightBlack};
   font-size: 25px;
   line-height: 1.4;
@@ -61,7 +62,7 @@ export const CallBtn = styled.a`
   justify-content: center;
 `;
 
-export const AuthBtn = styled.button`
+export const AuthBtn = styled(Link)`
   padding: 10px 15px;
   font-size: 15px;
   line-height: 1.4;
@@ -70,6 +71,7 @@ export const AuthBtn = styled.button`
   z-index: 1;
   display: flex;
   align-items: center;
+  border-radius: 24px;
   justify-content: center;
   min-width: 120px;
 `;

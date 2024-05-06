@@ -6,6 +6,7 @@ const lightGreenC = "#698079";
 const lightBlack = "#4e4e4e";
 const lightYellow = "#f3dcbc";
 const bgColor = "#fff8f8";
+const disableColor = "#babbbd";
 const bgGradient =
   "linear-gradient(  rgba(239, 230, 221, 0.9),  rgba(239, 230, 221, 0.9))";
 const mapOpacity = "rgba(105, 128, 121, 0.9)";
@@ -18,6 +19,7 @@ export {
   lightYellow,
   lightOrange,
   lightRed,
+  disableColor,
   bgColor,
   bgGradient,
   mapOpacity,

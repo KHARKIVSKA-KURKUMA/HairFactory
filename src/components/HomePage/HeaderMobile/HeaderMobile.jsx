@@ -4,7 +4,7 @@ import {
   CallBtn,
   CloseButton,
   EnrollInfoHeader,
-  Link,
+  LinkS,
   List,
   MenuContainer,
   MenuMobile,
@@ -26,31 +26,35 @@ const HeaderMobile = ({ onClose, isDesktop }) => {
         <Nav>
           <List onClick={onClose}>
             <Item>
-              <Link href="#service">
+              <LinkS href="#service">
                 {t("home.header.headerList.services")}
-              </Link>
+              </LinkS>
             </Item>
             <Item>
-              <Link href="#portfolio">
+              <LinkS href="#portfolio">
                 {t("home.header.headerList.portfolio")}
-              </Link>
+              </LinkS>
             </Item>
             <Item>
-              <Link href="#reviews">{t("home.header.headerList.reviews")}</Link>
+              <LinkS href="#reviews">
+                {t("home.header.headerList.reviews")}
+              </LinkS>
             </Item>
             <Item>
-              <Link href="#stock">{t("home.header.headerList.stock")}</Link>
+              <LinkS href="#stock">{t("home.header.headerList.stock")}</LinkS>
             </Item>
             <Item>
-              <Link href="#contacts">
+              <LinkS href="#contacts">
                 {t("home.header.headerList.contacts")}
-              </Link>
+              </LinkS>
             </Item>
           </List>
         </Nav>
         <EnrollInfoHeader>
           <CallBtn href="tel:+380961111111">{t("home.header.callBtn")}</CallBtn>
-          <AuthBtn type="button">{t("home.header.authBtn")}</AuthBtn>
+          <AuthBtn to="/login" type="button">
+            {t("home.header.authBtn")}
+          </AuthBtn>
         </EnrollInfoHeader>
       </MenuContainer>
     </MenuMobile>

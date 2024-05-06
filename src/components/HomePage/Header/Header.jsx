@@ -6,7 +6,7 @@ import {
   Container,
   EnrollInfoHeader,
   HeaderNavWrap,
-  Link,
+  LinkS,
   LogoWrap,
   MenuOpenButton,
   Nav,
@@ -37,41 +37,41 @@ const Header = () => {
               <Nav>
                 <NavList>
                   <NavItem>
-                    <Link href="#service">
+                    <LinkS href="#service">
                       {t("home.header.headerList.services")}
-                    </Link>
+                    </LinkS>
                   </NavItem>
                   <NavItem>
-                    <Link href="#portfolio">
+                    <LinkS href="#portfolio">
                       {t("home.header.headerList.portfolio")}
-                    </Link>
+                    </LinkS>
                   </NavItem>
                   <NavItem>
-                    <Link href="#reviews">
+                    <LinkS href="#reviews">
                       {t("home.header.headerList.reviews")}
-                    </Link>
+                    </LinkS>
                   </NavItem>
                   <NavItem>
-                    <Link href="#stock">
+                    <LinkS href="#stock">
                       {t("home.header.headerList.stock")}
-                    </Link>
+                    </LinkS>
                   </NavItem>
                   <NavItem>
-                    <Link href="#contacts">
+                    <LinkS href="#contacts">
                       {t("home.header.headerList.contacts")}
-                    </Link>
+                    </LinkS>
                   </NavItem>
                 </NavList>
               </Nav>
               <EnrollInfoHeader>
-                <Link href="tel:+380961111111">
+                <LinkS href="tel:+380961111111">
                   <StyledPhone />
                   +38 096 111 11 11
-                </Link>
+                </LinkS>
                 <CallBtn href="tel:+380961111111">
                   {t("home.header.callBtn")}
                 </CallBtn>
-                <AuthBtn type="button">{t("home.header.authBtn")}</AuthBtn>
+                <AuthBtn to="/login">{t("home.header.authBtn")}</AuthBtn>
               </EnrollInfoHeader>
             </HeaderNavWrap>
           </>
