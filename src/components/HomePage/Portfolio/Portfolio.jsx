@@ -30,32 +30,32 @@ const Portfolio = () => {
         autoPlay={true}
         autoPlaySpeed={3000}
         customTransition="all .5"
-        transitionDuration={500}
+        transitionDuration={1000}
         containerClass="carousel-container"
         arrows={false}
         dotListClass="custom-dot-list-style"
         renderDotsOutside={true}
       >
         <SideWrap>
-          <img src={Portfolio1} alt="Portfolio1" />
-          <img src={Portfolio2} alt="Portfolio2" />
+          <img src={Portfolio1} alt="Portfolio1" loading="lazy" />
+          <img src={Portfolio2} alt="Portfolio2" loading="lazy" />
         </SideWrap>
-        <CenterImg src={PortfolioC1} alt="Portfolio" />
+        <CenterImg src={PortfolioC1} alt="Portfolio" loading="lazy" />
         <SideWrap>
-          <img src={Portfolio3} alt="Portfolio3" />
-          <img src={Portfolio4} alt="Portfolio4" />
+          <img src={Portfolio3} alt="Portfolio3" loading="lazy" />
+          <img src={Portfolio4} alt="Portfolio4" loading="lazy" />
         </SideWrap>
-        <CenterImg src={PortfolioC2} alt="Portfolio" />
+        <CenterImg src={PortfolioC2} alt="Portfolio" loading="lazy" />
         <SideWrap>
-          <img src={Portfolio5} alt="Portfolio5" />
-          <img src={Portfolio6} alt="Portfolio6" />
+          <img src={Portfolio5} alt="Portfolio5" loading="lazy" />
+          <img src={Portfolio6} alt="Portfolio6" loading="lazy" />
         </SideWrap>
-        <CenterImg src={PortfolioC3} alt="Portfolio" />
+        <CenterImg src={PortfolioC3} alt="Portfolio" loading="lazy" />
         <SideWrap>
-          <img src={Portfolio7} alt="Portfolio7" />
-          <img src={Portfolio8} alt="Portfolio8" />
+          <img src={Portfolio7} alt="Portfolio7" loading="lazy" />
+          <img src={Portfolio8} alt="Portfolio8" loading="lazy" />
         </SideWrap>
-        <CenterImg src={PortfolioC4} alt="Portfolio" />
+        <CenterImg src={PortfolioC4} alt="Portfolio" loading="lazy" />
       </Carousel>
     </Container>
   );

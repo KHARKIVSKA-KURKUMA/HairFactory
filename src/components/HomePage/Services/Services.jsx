@@ -24,17 +24,17 @@ const Services = () => {
         autoPlay={true}
         autoPlaySpeed={2000}
         customTransition="all .5"
-        transitionDuration={500}
+        transitionDuration={1000}
         containerClass="carousel-container"
         arrows={false}
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
       >
-        <img src={Services1} alt="Services1" />
-        <img src={Services2} alt="Services2" />
-        <img src={Services3} alt="Services3" />
-        <img src={Services4} alt="Services4" />
-        <img src={Services5} alt="Services5" />
+        <img src={Services1} loading="lazy" alt="Services1" />
+        <img src={Services2} loading="lazy" alt="Services2" />
+        <img src={Services3} loading="lazy" alt="Services3" />
+        <img src={Services4} loading="lazy" alt="Services4" />
+        <img src={Services5} loading="lazy" alt="Services5" />
       </Carousel>
     </Container>
   );

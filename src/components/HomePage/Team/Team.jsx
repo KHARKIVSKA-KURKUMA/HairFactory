@@ -31,7 +31,7 @@ const Team = () => {
         autoPlay={true}
         autoPlaySpeed={10000}
         customTransition="all .5"
-        transitionDuration={500}
+        transitionDuration={1000}
         renderDotsOutside={true}
         containerClass="carousel-container"
         arrows={false}
@@ -40,27 +40,25 @@ const Team = () => {
       >
         <a href="#link" className="item">
           <Wrap>
-            <Image src={Ksenia} alt="Team" />
+            <Image src={Ksenia} alt="Team" loading="lazy" />
             <AboutWrap>
               <Name>{t("home.team.ksenia")}</Name>
               <Descr>{t("home.team.profecion")}</Descr>
             </AboutWrap>
           </Wrap>
         </a>
-
         <a href="#link" className="item">
           <Wrap>
-            <Image src={Natasha} alt="Team" />
+            <Image src={Natasha} alt="Team" loading="lazy" />
             <AboutWrap>
               <Name>{t("home.team.natasha")}</Name>
               <Descr>{t("home.team.profecion")}</Descr>
             </AboutWrap>
           </Wrap>
         </a>
-
         <a href="#link" className="item">
           <Wrap>
-            <Image src={Violeta} alt="Team" />
+            <Image src={Violeta} alt="Team" loading="lazy" />
             <AboutWrap>
               <Name>{t("home.team.violetta")}</Name>
               <Descr>{t("home.team.profecion")}</Descr>

@@ -17,11 +17,11 @@ const Consultation = () => {
   const { t } = useTranslation();
   return (
     <Container>
-      <Img src={Pictures} />
+      <Img src={Pictures} alt="Photo" loading="lazy" />
       <Wrap>
         <Title>{t("home.consultation.title")}</Title>
         <Descr> {t("home.consultation.descr")}</Descr>
-        <Star src={StarR} />
+        <Star src={StarR} alt="Star" />
         <Form>
           <TextField label={t("home.consultation.name")} variant="outlined" />
           <TextField label={t("home.consultation.phone")} variant="outlined" />
