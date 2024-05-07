@@ -15,6 +15,7 @@ import { useState } from "react";
 import { HomeLink } from "../SignIn/SignIn.styled";
 import { IoHome } from "react-icons/io5";
 import { lightRed } from "../../utils/colors";
+import { useTranslation } from "react-i18next";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -24,10 +25,10 @@ const SignUp = () => {
   const [passwordError, setPasswordError] = useState("");
   const [userNameError, setUserNameError] = useState("");
   const emailRegExp = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+  const { t } = useTranslation();
   /* -------------------------------------------------------------------------- */
   const handleSubmit = (e) => {
     e.preventDefault();
-
     setEmail("");
     setPassword("");
     setUsername("");
@@ -46,7 +47,7 @@ const SignUp = () => {
     if (newEmail === "" || emailRegExp.test(newEmail)) {
       setError("");
     } else {
-      setError("Invalid e-mail format");
+      setError(t("signUp.emailError"));
     }
   };
   const handlePasswordChange = (e) => {
@@ -55,7 +56,7 @@ const SignUp = () => {
     if (newPassword === "" || newPassword.length >= 6) {
       setPasswordError("");
     } else {
-      setPasswordError("Password must be at least 6 characters long");
+      setPasswordError(t("signUp.passError"));
     }
   };
   const handleUserNameChange = (e) => {
@@ -64,7 +65,7 @@ const SignUp = () => {
     if (newUserName === "" || newUserName.length >= 3) {
       setUserNameError("");
     } else {
-      setUserNameError("Username must be at least 3 characters long");
+      setUserNameError(t("signUp.nameError"));
     }
   };
   /* --------------------------------- RENDER --------------------------------- */
@@ -74,13 +75,13 @@ const SignUp = () => {
         <HomeLink to="/">
           <IoHome size={30} color={lightRed} />
         </HomeLink>
-        <Title>Register</Title>
-        <Decr>Hey, enter your details to create your account</Decr>
+        <Title>{t("signUp.title")}</Title>
+        <Decr>{t("signUp.descr")}</Decr>
         <Form onSubmit={handleSubmit}>
           <InputWrapper>
             <TextField
               id="Username"
-              label="Username"
+              label={t("signUp.name")}
               variant="outlined"
               type="text"
               value={username}
@@ -91,7 +92,7 @@ const SignUp = () => {
             />
             <TextField
               id="Email"
-              label="Email"
+              label={t("signUp.email")}
               type="email"
               variant="outlined"
               value={email}
@@ -102,7 +103,7 @@ const SignUp = () => {
             />
             <TextField
               id="Password"
-              label="Password"
+              label={t("signUp.pass")}
               variant="outlined"
               type="password"
               value={password}
@@ -113,12 +114,12 @@ const SignUp = () => {
             />
           </InputWrapper>
           <SubmitButton disabled={!isValid} type="submit">
-            Sign Up
+            {t("signUp.btn")}
           </SubmitButton>
         </Form>
         <SignInWrap>
-          <SignInDecr> Already registered?</SignInDecr>
-          <SignInLink to="/login">Sign In</SignInLink>
+          <SignInDecr>{t("signUp.ifAuth")}</SignInDecr>
+          <SignInLink to="/login">{t("signUp.signIn")}</SignInLink>
         </SignInWrap>
       </SignUpWrap>
     </Container>

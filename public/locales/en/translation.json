@@ -82,5 +82,29 @@
       "mode": "Working mode",
       "time": "Mon-Sun from 9:00 to 23:00"
     }
+  },
+  "signIn": {
+    "title": "Login",
+    "descr": "Hey, enter your details to get sign in to your account",
+    "btn": " Sign In",
+    "ifNoAuth": "Don't have an account?",
+    "signUp": "Sign Up",
+    "pass": "Password",
+    "email": "Email",
+    "emailError": "Invalid e-mail format",
+    "passError": "Password must be at least 6 characters long"
+  },
+  "signUp": {
+    "title": "Register",
+    "descr": "Hey, enter your details to create your account",
+    "btn": " Sign Up",
+    "ifAuth": "Already registered?",
+    "signIn": "Sign In",
+    "pass": "Password",
+    "email": "Email",
+    "name": "Username",
+    "emailError": "Invalid e-mail format",
+    "passError": "Password must be at least 6 characters long",
+    "nameError": "Username must be at least 3 characters long"
   }
 }

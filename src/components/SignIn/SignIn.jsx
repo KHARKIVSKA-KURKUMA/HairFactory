@@ -15,6 +15,7 @@ import {
 import { useState } from "react";
 import { IoHome } from "react-icons/io5";
 import { lightRed } from "../../utils/colors";
+import { useTranslation } from "react-i18next";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -22,7 +23,7 @@ const SignIn = () => {
   const [error, setError] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const emailRegExp = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
-
+  const { t } = useTranslation();
   /* -------------------------------------------------------------------------- */
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -41,7 +42,7 @@ const SignIn = () => {
     if (newEmail === "" || emailRegExp.test(newEmail)) {
       setError("");
     } else {
-      setError("Invalid e-mail format");
+      setError(t("signIn.emailError"));
     }
   };
   const handlePasswordChange = (e) => {
@@ -50,7 +51,7 @@ const SignIn = () => {
     if (newPassword === "" || newPassword.length >= 6) {
       setPasswordError("");
     } else {
-      setPasswordError("Password must be at least 6 characters long");
+      setPasswordError(t("signIn.passError"));
     }
   };
   /* -------------------------------------------------------------------------- */
@@ -60,13 +61,13 @@ const SignIn = () => {
         <HomeLink to="/">
           <IoHome size={30} color={lightRed} />
         </HomeLink>
-        <Title>Login</Title>
-        <Decr>Hey, enter your details to get sign in to your account</Decr>
+        <Title>{t("signIn.title")}</Title>
+        <Decr>{t("signIn.descr")}</Decr>
         <Form onSubmit={handleSubmit}>
           <InputWrapper>
             <TextField
               id="UserMail"
-              label="Email"
+              label={t("signIn.email")}
               type="email"
               variant="outlined"
               value={email}
@@ -77,7 +78,7 @@ const SignIn = () => {
             />
             <TextField
               id="UserPassword"
-              label="Password"
+              label={t("signIn.pass")}
               variant="outlined"
               type="password"
               value={password}
@@ -88,12 +89,12 @@ const SignIn = () => {
             />
           </InputWrapper>
           <SubmitButton disabled={!isValid} type="submit">
-            Sign In
+            {t("signIn.btn")}
           </SubmitButton>
         </Form>
         <SignUpWrap>
-          <SignUpDecr> Don't have an account?</SignUpDecr>
-          <SignUpLink to="/registration">Sign Up</SignUpLink>
+          <SignUpDecr> {t("signIn.ifNoAuth")}</SignUpDecr>
+          <SignUpLink to="/registration">{t("signIn.signUp")}</SignUpLink>
         </SignUpWrap>
       </SignInWrap>
     </Container>
