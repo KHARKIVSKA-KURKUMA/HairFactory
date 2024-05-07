@@ -7,22 +7,26 @@ import {
   lightOrange,
   lightRed,
 } from "../../utils/colors";
+import { desktop } from "../../utils/viewpoints";
 
 export const Container = styled.div`
   background-color: ${bgColor};
   width: 100vw;
   position: fixed;
   height: 100vh;
-  background-image: url(${bgImg});
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   max-width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   padding-top: 30px;
+  align-items: center;
+  ${desktop} {
+    align-items: flex-end;
+    background-image: url(${bgImg});
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 `;
 
 export const SignUpWrap = styled.div`
@@ -32,9 +36,11 @@ export const SignUpWrap = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: #fff;
-  width: 550px;
+  max-width: 550px;
   border-radius: 30px;
-  margin-right: 120px;
+  ${desktop} {
+    margin-right: 120px;
+  }
 `;
 export const Form = styled.form`
   display: flex;
