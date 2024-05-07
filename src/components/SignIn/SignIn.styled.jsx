@@ -8,22 +8,31 @@ import {
   lightOrange,
   lightRed,
 } from "../../utils/colors";
+import { desktop } from "../../utils/viewpoints";
 
 export const Container = styled.div`
   background-color: ${bgColor};
   width: 100vw;
   position: fixed;
   height: 100vh;
-  background-image: url(${bgImg});
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   max-width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 30px;
+  ${desktop} {
+    background-image: url(${bgImg});
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+`;
+
+export const HomeLink = styled(Link)`
+  position: absolute;
+  left: 20px;
+  top: 15px;
 `;
 
 export const SignInWrap = styled.div`
@@ -33,6 +42,7 @@ export const SignInWrap = styled.div`
   align-items: center;
   background-color: #fff;
   max-width: 450px;
+  position: relative;
   border-radius: 30px;
 `;
 export const Form = styled.form`
@@ -103,13 +113,10 @@ export const SignUpLink = styled(Link)`
   text-decoration: none;
   color: ${lightBlack};
   font-weight: 700;
-  font-family: "Raleway", sans-serif;
   transition: color 300ms linear;
   &:hover,
   &:focus {
     color: ${lightRed};
   }
 `;
-export const SignUpDecr = styled.p`
-  font-family: "Raleway", sans-serif;
-`;
+export const SignUpDecr = styled.p``;

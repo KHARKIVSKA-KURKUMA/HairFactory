@@ -2,11 +2,12 @@ import { useTranslation } from "react-i18next";
 import { locales } from "../../../utils/locales";
 import { Item, Link, List } from "./LangSwitcher.styled";
 import { lightRed } from "../../../utils/colors";
+import PropTypes from "prop-types";
 
 const LangSwitcher = ({ isDesktop }) => {
   const { i18n } = useTranslation();
   return (
-    <List isDesktop={isDesktop}>
+    <List $isDesktop={isDesktop}>
       {Object.keys(locales).map((locale) => (
         <Item key={locale}>
           <Link
@@ -24,6 +25,10 @@ const LangSwitcher = ({ isDesktop }) => {
       ))}
     </List>
   );
+};
+
+LangSwitcher.propTypes = {
+  isDesktop: PropTypes.bool.isRequired,
 };
 
 export default LangSwitcher;

@@ -10,8 +10,9 @@ export const List = styled.ul`
     }
   }
   ${(props) =>
-    !props.isDesktop &&
-    `margin: 40px 0 30px;
+    !props.$isDesktop &&
+    `
+    margin: 40px 0 30px;
     justify-content: center;
   `}
 `;

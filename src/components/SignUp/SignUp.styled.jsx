@@ -27,6 +27,7 @@ export const Container = styled.div`
 
 export const SignUpWrap = styled.div`
   padding: 40px;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;

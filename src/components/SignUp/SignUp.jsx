@@ -12,6 +12,9 @@ import {
   SignInDecr,
 } from "./SignUp.styled";
 import { useState } from "react";
+import { HomeLink } from "../SignIn/SignIn.styled";
+import { IoHome } from "react-icons/io5";
+import { lightRed } from "../../utils/colors";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -68,6 +71,9 @@ const SignUp = () => {
   return (
     <Container>
       <SignUpWrap>
+        <HomeLink to="/">
+          <IoHome size={30} color={lightRed} />
+        </HomeLink>
         <Title>Register</Title>
         <Decr>Hey, enter your details to create your account</Decr>
         <Form onSubmit={handleSubmit}>
