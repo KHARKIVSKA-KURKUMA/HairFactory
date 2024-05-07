@@ -78,10 +78,11 @@ export const Decr = styled.p`
 export const Title = styled.h2`
   font-size: 36px;
   margin: 0;
-  font-family: "Black Ops One", cursive;
+  font-family: "Pacifico", cursive;
   text-align: center;
   font-weight: 900;
   text-transform: uppercase;
+  margin-bottom: 10px;
 `;
 
 export const SubmitButton = styled.button`

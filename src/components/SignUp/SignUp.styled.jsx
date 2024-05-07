@@ -67,10 +67,11 @@ export const InputWrapper = styled.div`
 export const Title = styled.h2`
   font-size: 38px;
   margin: 0;
-  font-family: "Black Ops One", cursive;
+  font-family: "Pacifico", cursive;
   text-align: center;
   font-weight: 900;
   text-transform: uppercase;
+  margin-bottom: 10px;
 `;
 
 export const SubmitButton = styled.button`
