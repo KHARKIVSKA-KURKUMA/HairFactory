@@ -11,7 +11,7 @@ export const Button = styled.button`
   height: 50px;
   border-radius: 50%;
   cursor: pointer;
-  opacity: ${(props) => (props.isVisible ? "1" : "0")};
+  opacity: ${(props) => (props.visible ? "1" : "0")};
   transition: opacity 0.3s ease-in-out;
   display: flex;
   justify-content: center;

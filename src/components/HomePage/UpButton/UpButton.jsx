@@ -26,7 +26,7 @@ const UpButton = () => {
     };
   }, []);
   return (
-    <Button isVisible={isVisible} onClick={scrollToTop}>
+    <Button visible={isVisible ? "true" : "false"} onClick={scrollToTop}>
       <TiArrowUpOutline size={28} color={desertStorm} />
     </Button>
   );
