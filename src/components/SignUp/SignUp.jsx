@@ -16,6 +16,8 @@ import { HomeLink } from "../SignIn/SignIn.styled";
 import { IoHome } from "react-icons/io5";
 import { lightRed } from "../../utils/colors";
 import { useTranslation } from "react-i18next";
+import { useDispatch } from "react-redux";
+import { register } from "../../store/auth/authThunks";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -26,12 +28,20 @@ const SignUp = () => {
   const [userNameError, setUserNameError] = useState("");
   const emailRegExp = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
   const { t } = useTranslation();
+  const dispatch = useDispatch();
   /* -------------------------------------------------------------------------- */
   const handleSubmit = (e) => {
     e.preventDefault();
-    setEmail("");
-    setPassword("");
-    setUsername("");
+    // setEmail("");
+    // setPassword("");
+    // setUsername("");
+    dispatch(
+      register({
+        name: username,
+        email,
+        password,
+      })
+    );
   };
   const isValid =
     Boolean(passwordError) !== true &&

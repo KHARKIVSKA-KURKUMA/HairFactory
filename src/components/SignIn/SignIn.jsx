@@ -16,6 +16,8 @@ import { useState } from "react";
 import { IoHome } from "react-icons/io5";
 import { lightRed } from "../../utils/colors";
 import { useTranslation } from "react-i18next";
+import { useDispatch } from "react-redux";
+import { logIn } from "../../store/auth/authThunks";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -24,11 +26,14 @@ const SignIn = () => {
   const [passwordError, setPasswordError] = useState("");
   const emailRegExp = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
   const { t } = useTranslation();
+  const dispatch = useDispatch();
   /* -------------------------------------------------------------------------- */
   const handleSubmit = (e) => {
     e.preventDefault();
-    setEmail("");
-    setPassword("");
+    dispatch(logIn({ email, password }));
+
+    // setEmail("");
+    // setPassword("");
   };
   const isValid =
     Boolean(passwordError) !== true &&

@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import { GlobalStyle } from "./GlobalStyles";
 import LoginPage from "./pages/LoginPage";
@@ -19,6 +19,7 @@ function App() {
               <Route path="/registration" element={<RegistrationPage />} />
               <Route path="/master" element={<MasterPage />} />
             </Route>
+            <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </BrowserRouter>
       </StyleSheetManager>
