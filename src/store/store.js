@@ -9,9 +9,11 @@ import {
   REGISTER,
 } from "redux-persist";
 import { persistedAuthReducer } from "./auth/authSlice";
+import { enrollmentsReducer } from "./enrollments/enrollmentsSlice";
 
 const reducer = {
   auth: persistedAuthReducer,
+  enrollments: enrollmentsReducer,
 };
 
 export const store = configureStore({

@@ -18,6 +18,7 @@ function App() {
               <Route path="/login" element={<LoginPage />} />
               <Route path="/registration" element={<RegistrationPage />} />
               <Route path="/master" element={<MasterPage />} />
+              {/* <Route path="/client" element={<MasterPage />} /> */}
             </Route>
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>

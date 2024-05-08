@@ -51,9 +51,9 @@
     "team": {
       "title": "Our masters",
       "descr": "Hairdressers-colorists with 10+ years of experience",
-      "ksenia": "Ksenia Boltushkina",
-      "natasha": "Natasha Uglova",
-      "violetta": "Violetta Shurygina",
+      "ksenia": "Sarah Smith",
+      "natasha": "Jessica Johnson",
+      "violetta": "Karen Brown",
       "profecion": "Hairdressing technologist"
     },
     "review": {
@@ -106,5 +106,10 @@
     "emailError": "Invalid e-mail format",
     "passError": "Password must be at least 6 characters long",
     "nameError": "Username must be at least 3 characters long"
+  },
+  "enrollments": {
+    "client": "Client:",
+    "master": "Master:",
+    "logout": "Logout"
   }
 }

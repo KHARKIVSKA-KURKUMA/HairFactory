@@ -32,9 +32,9 @@ const SignUp = () => {
   /* -------------------------------------------------------------------------- */
   const handleSubmit = (e) => {
     e.preventDefault();
-    // setEmail("");
-    // setPassword("");
-    // setUsername("");
+    setEmail("");
+    setPassword("");
+    setUsername("");
     dispatch(
       register({
         name: username,

@@ -31,9 +31,8 @@ const SignIn = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(logIn({ email, password }));
-
-    // setEmail("");
-    // setPassword("");
+    setEmail("");
+    setPassword("");
   };
   const isValid =
     Boolean(passwordError) !== true &&

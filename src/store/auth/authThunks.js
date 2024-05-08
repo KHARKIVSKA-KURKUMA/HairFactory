@@ -2,6 +2,8 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { toast } from "react-toastify";
 
+axios.defaults.baseURL = "https://hair-factory-api.onrender.com";
+
 export const token = {
   set(token) {
     axios.defaults.headers.common.Authorization = `Bearer ${token}`;
@@ -10,8 +12,6 @@ export const token = {
     axios.defaults.headers.common.Authorization = "";
   },
 };
-
-axios.defaults.baseURL = "https://hair-factory-api.onrender.com";
 
 export const register = createAsyncThunk(
   "auth/register",
