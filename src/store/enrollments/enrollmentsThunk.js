@@ -25,18 +25,6 @@ export const getEnrollmentsThunk = createAsyncThunk(
     }
   }
 );
-/* -------------------------------- GET BY ID ------------------------------- */
-export const getEnrolmentThunk = createAsyncThunk(
-  "enrollments/getEnrolment",
-  async (enrolmentId, { rejectWithValue }) => {
-    try {
-      const { data } = await axios.get(`/enrollments/${enrolmentId}`);
-      return data;
-    } catch (error) {
-      return rejectWithValue(error.message);
-    }
-  }
-);
 /* ----------------------------------- ADD ---------------------------------- */
 export const postEnrollmentsThunk = createAsyncThunk(
   "enrollments/postEnrollments",

@@ -2,7 +2,6 @@ import { createSlice, isAnyOf } from "@reduxjs/toolkit";
 import {
   deleteEnrollmentsThunk,
   getEnrollmentsThunk,
-  getEnrolmentThunk,
   getMasterEnrollmentsThunk,
   postEnrollmentsThunk,
   putEnrollmentsThunk,
@@ -31,9 +30,6 @@ const enrollmentsSlice = createSlice({
       .addCase(postEnrollmentsThunk.fulfilled, (state, { payload }) => {
         state.enrollments.push(payload);
       })
-      .addCase(getEnrolmentThunk.fulfilled, (state, { payload }) => {
-        //  1 enrolment
-      })
       .addCase(deleteEnrollmentsThunk.fulfilled, (state, { meta }) => {
         const index = state.enrollments.findIndex(
           (enrolment) => enrolment._id === meta.arg
@@ -50,7 +46,6 @@ const enrollmentsSlice = createSlice({
         isAnyOf(
           getMasterEnrollmentsThunk.pending,
           getEnrollmentsThunk.pending,
-          getEnrolmentThunk.pending,
           postEnrollmentsThunk.pending,
           deleteEnrollmentsThunk.pending,
           putEnrollmentsThunk.pending
@@ -61,7 +56,6 @@ const enrollmentsSlice = createSlice({
         isAnyOf(
           getMasterEnrollmentsThunk.fulfilled,
           getEnrollmentsThunk.fulfilled,
-          getEnrolmentThunk.fulfilled,
           postEnrollmentsThunk.fulfilled,
           deleteEnrollmentsThunk.fulfilled,
           putEnrollmentsThunk.fulfilled
