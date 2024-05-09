@@ -1,17 +1,13 @@
 import styled from "styled-components";
 import Header from "../components/AuthComponents/Header";
 import { desertStorm } from "../utils/colors";
-import EnrollmentsList from "../components/AuthComponents/EnrollmentsList";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
-import { getMasterEnrollmentsThunk } from "../store/enrollments/enrollmentsThunk";
-import { getUserEmail } from "../store/auth/authSelectors";
-import { findMasterByEmail } from "../data/enrollmentsHelper";
+import { useSelector } from "react-redux";
 import {
+  getEnrollments,
   getEnrollmentsLoading,
-  getMasterEnrollments,
 } from "../store/enrollments/enrollmentsSelectors";
 import NoDataNotification from "../components/Notification/NoDataNotification";
+import EnrollmentsList from "../components/AuthComponents/EnrollmentsList";
 import LoaderForThunk from "../components/Loader/LoaderForThunk";
 
 const Container = styled.div`
@@ -19,15 +15,10 @@ const Container = styled.div`
   min-height: calc(100dvh);
 `;
 
-const MasterPage = () => {
-  const dispatch = useDispatch();
-  const email = useSelector(getUserEmail);
-  const masterId = findMasterByEmail(email);
-  useEffect(() => {
-    dispatch(getMasterEnrollmentsThunk(masterId));
-  }, [dispatch, masterId]);
-  const enrollments = useSelector(getMasterEnrollments);
+const ClientPage = () => {
+  const enrollments = useSelector(getEnrollments);
   const isLoad = useSelector(getEnrollmentsLoading);
+  console.log("isLoad :>> ", isLoad);
   return (
     <Container>
       <Header />
@@ -44,4 +35,4 @@ const MasterPage = () => {
   );
 };
 
-export default MasterPage;
+export default ClientPage;

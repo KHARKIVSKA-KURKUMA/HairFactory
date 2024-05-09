@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, isAnyOf } from "@reduxjs/toolkit";
 import {
   getEnrollmentsThunk,
   getMasterEnrollmentsThunk,
@@ -25,8 +25,14 @@ const enrollmentsSlice = createSlice({
         state.isLoading = false;
         state.error = "";
       })
-      .addMatcher((action) => action.type.endsWith("/rejected"), handleRejected)
-      .addMatcher((action) => action.type.endsWith("/pending"), handlePending);
+      .addMatcher(
+        isAnyOf(getMasterEnrollmentsThunk.pending, getEnrollmentsThunk.pending),
+        handlePending
+      )
+      .addMatcher(
+        (action) => action.type.endsWith("/rejected"),
+        handleRejected
+      );
   },
 });
 
