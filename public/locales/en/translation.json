@@ -110,6 +110,14 @@
   "enrollments": {
     "client": "Client:",
     "master": "Master:",
-    "logout": "Logout"
+    "logout": "Logout",
+    "master1": "Sarah Smith",
+    "master2": "Jessica Johnson",
+    "master3": "Karen Brown",
+    "time": "Time",
+    "date": "Date",
+    "phone": "Phone",
+    "enroll": "Enroll",
+    "select": "Select a date"
   }
 }

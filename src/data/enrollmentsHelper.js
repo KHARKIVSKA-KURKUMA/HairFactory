@@ -24,4 +24,41 @@ function findMasterByEmail(email) {
   return master ? master.id : null;
 }
 
-export { DateFormat, findMasterById, findMasterByIdUk, findMasterByEmail };
+const availableHours = Array.from({ length: 15 }, (_, i) => {
+  const hour = i + 9;
+  const period = hour >= 12 ? "PM" : "AM";
+  return {
+    value: hour,
+    label: `${hour > 12 ? hour - 12 : hour} ${period}`,
+  };
+});
+
+function convertToTimeFormat(number) {
+  if (number === 0) {
+    return "12:00 AM";
+  } else if (number === 12) {
+    return "12:00 PM";
+  } else if (number < 12) {
+    return `${number}:00 ` + "AM";
+  } else {
+    return `${number - 12}:00 ` + "PM";
+  }
+}
+
+function extractDateString(inputDateString) {
+  const inputDate = new Date(inputDateString);
+  const year = inputDate.getFullYear();
+  const month = ("0" + (inputDate.getMonth() + 1)).slice(-2);
+  const day = ("0" + inputDate.getDate()).slice(-2);
+  return `${year}-${month}-${day}`;
+}
+
+export {
+  DateFormat,
+  findMasterById,
+  findMasterByIdUk,
+  findMasterByEmail,
+  availableHours,
+  extractDateString,
+  convertToTimeFormat,
+};

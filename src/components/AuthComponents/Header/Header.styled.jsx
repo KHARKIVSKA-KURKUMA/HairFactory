@@ -37,7 +37,9 @@ const LogOut = styled.button`
   text-transform: uppercase;
   display: flex;
   gap: 5px;
-  &:hover {
+  transition: 500ms background-color linear, 500ms color linear;
+  &:hover,
+  &:focus {
     background-color: ${lightRed};
     color: ${desertStorm};
   }
