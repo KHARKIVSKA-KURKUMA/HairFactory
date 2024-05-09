@@ -8,8 +8,8 @@ import { getMasterEnrollmentsThunk } from "../store/enrollments/enrollmentsThunk
 import { getUserEmail } from "../store/auth/authSelectors";
 import { findMasterByEmail } from "../data/enrollmentsHelper";
 import {
+  getEnrollments,
   getEnrollmentsLoading,
-  getMasterEnrollments,
 } from "../store/enrollments/enrollmentsSelectors";
 import NoDataNotification from "../components/Notification/NoDataNotification";
 import LoaderForThunk from "../components/Loader/LoaderForThunk";
@@ -26,7 +26,7 @@ const MasterPage = () => {
   useEffect(() => {
     dispatch(getMasterEnrollmentsThunk(masterId));
   }, [dispatch, masterId]);
-  const enrollments = useSelector(getMasterEnrollments);
+  const enrollments = useSelector(getEnrollments);
   const isLoad = useSelector(getEnrollmentsLoading);
   return (
     <Container>

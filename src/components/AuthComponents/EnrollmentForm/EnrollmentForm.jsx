@@ -8,6 +8,7 @@ import Master2 from "../../../img/violeta.jpg";
 import Master3 from "../../../img/natasha.jpg";
 import {
   availableHours,
+  convertTimeTo24HourFormat,
   convertToTimeFormat,
   extractDateString,
 } from "../../../data/enrollmentsHelper";
@@ -27,12 +28,25 @@ import {
   CloseBtn,
 } from "./EnrollmentForm.styled";
 import { lightBlack } from "../../../utils/colors";
+import { useDispatch } from "react-redux";
+import {
+  postEnrollmentsThunk,
+  putEnrollmentsThunk,
+} from "../../../store/enrollments/enrollmentsThunk";
 
-const EnrollmentForm = ({ onClose }) => {
-  const [masterId, setMasterId] = useState("");
-  const [hour, setHour] = useState("9");
-  const [date, setDate] = useState(null);
-  const [phone, setPhone] = useState("");
+const EnrollmentForm = ({ data, onClose }) => {
+  const isEdited = data !== undefined;
+  const dispatch = useDispatch();
+  const [masterId, setMasterId] = useState(
+    data !== undefined ? data.master : ""
+  );
+  const [hour, setHour] = useState(
+    data !== undefined ? convertTimeTo24HourFormat(data.enrolmentTime) : "9"
+  );
+  const [date, setDate] = useState(
+    data !== undefined ? data.enrolmentDate : null
+  );
+  const [phone, setPhone] = useState(data !== undefined ? data.phone : "");
   const [formCompleted, setFormCompleted] = useState(false);
   const { t } = useTranslation();
 
@@ -50,7 +64,12 @@ const EnrollmentForm = ({ onClose }) => {
       enrolmentTime: updatedHour,
       phone: phone,
     };
-    console.log("newEnrolment :>> ", newEnrolment);
+    if (isEdited) {
+      dispatch(putEnrollmentsThunk({ enrolmentId: data._id, newEnrolment }));
+    } else {
+      dispatch(postEnrollmentsThunk(newEnrolment));
+    }
+    onClose();
   };
 
   const handlePhoneChange = (e) => {
@@ -141,7 +160,7 @@ const EnrollmentForm = ({ onClose }) => {
             />
           </DataTimeContainer>
           <Btn type="button" disabled={!formCompleted} onClick={handleEnroll}>
-            {t("enrollments.enroll")}
+            {isEdited ? t("enrollments.update") : t("enrollments.enroll")}
           </Btn>
         </Form>
       </FormContainer>

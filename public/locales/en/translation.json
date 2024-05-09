@@ -118,6 +118,7 @@
     "date": "Date",
     "phone": "Phone",
     "enroll": "Enroll",
-    "select": "Select a date"
+    "select": "Select a date",
+    "update": "Update"
   }
 }

@@ -17,6 +17,14 @@ const Item = styled.li`
   flex-direction: column;
   justify-content: space-between;
 `;
+const BtnList = styled.ul`
+  display: flex;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  gap: 10px;
+`;
+
 const Btn = styled.button`
   width: 50px;
   height: 50px;
@@ -25,9 +33,6 @@ const Btn = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  right: 10px;
-  top: 10px;
   transition: 500ms background-color linear;
   &:hover,
   &:focus {
@@ -39,7 +44,7 @@ const ClientWrap = styled.div`
   flex-wrap: wrap;
   gap: 5px;
   margin-bottom: 20px;
-  margin-top: ${(props) => (props.role === "client" ? "50px" : "20px")};
+  margin-top: ${(props) => (props.role === "client" ? "60px" : "20px")};
 `;
 
 const MasterWrap = styled.div`
@@ -78,4 +83,14 @@ const Time = styled.div`
   border: 1px solid ${lightBlack};
 `;
 
-export { Item, Btn, ClientWrap, MasterWrap, Descr, Date, DateWrap, Time };
+export {
+  Item,
+  BtnList,
+  Btn,
+  ClientWrap,
+  MasterWrap,
+  Descr,
+  Date,
+  DateWrap,
+  Time,
+};

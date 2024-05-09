@@ -1,33 +1,72 @@
 import { createSlice, isAnyOf } from "@reduxjs/toolkit";
 import {
+  deleteEnrollmentsThunk,
   getEnrollmentsThunk,
+  getEnrolmentThunk,
   getMasterEnrollmentsThunk,
+  postEnrollmentsThunk,
+  putEnrollmentsThunk,
 } from "./enrollmentsThunk";
-import { handlePending, handleRejected } from "./enrollmentsOperation";
+import {
+  handleFulfilled,
+  handlePending,
+  handleRejected,
+} from "./enrollmentsOperation";
 
 const enrollmentsSlice = createSlice({
   name: "enrollments",
   initialState: {
     enrollments: [],
-    enrollmentsM: [],
     isLoading: false,
     error: "",
   },
   extraReducers: (builder) => {
     builder
       .addCase(getMasterEnrollmentsThunk.fulfilled, (state, { payload }) => {
-        state.enrollmentsM = [...payload];
-        state.isLoading = false;
-        state.error = "";
+        state.enrollments = [...payload];
       })
       .addCase(getEnrollmentsThunk.fulfilled, (state, { payload }) => {
         state.enrollments = [...payload];
-        state.isLoading = false;
-        state.error = "";
+      })
+      .addCase(postEnrollmentsThunk.fulfilled, (state, { payload }) => {
+        state.enrollments.push(payload);
+      })
+      .addCase(getEnrolmentThunk.fulfilled, (state, { payload }) => {
+        //  1 enrolment
+      })
+      .addCase(deleteEnrollmentsThunk.fulfilled, (state, { meta }) => {
+        const index = state.enrollments.findIndex(
+          (enrolment) => enrolment._id === meta.arg
+        );
+        state.enrollments.splice(index, 1);
+      })
+      .addCase(putEnrollmentsThunk.fulfilled, (state, { payload }) => {
+        const index = state.enrollments.findIndex(
+          (enrolment) => enrolment._id === payload._id
+        );
+        state.enrollments.splice(index, 1, payload);
       })
       .addMatcher(
-        isAnyOf(getMasterEnrollmentsThunk.pending, getEnrollmentsThunk.pending),
+        isAnyOf(
+          getMasterEnrollmentsThunk.pending,
+          getEnrollmentsThunk.pending,
+          getEnrolmentThunk.pending,
+          postEnrollmentsThunk.pending,
+          deleteEnrollmentsThunk.pending,
+          putEnrollmentsThunk.pending
+        ),
         handlePending
+      )
+      .addMatcher(
+        isAnyOf(
+          getMasterEnrollmentsThunk.fulfilled,
+          getEnrollmentsThunk.fulfilled,
+          getEnrolmentThunk.fulfilled,
+          postEnrollmentsThunk.fulfilled,
+          deleteEnrollmentsThunk.fulfilled,
+          putEnrollmentsThunk.fulfilled
+        ),
+        handleFulfilled
       )
       .addMatcher(
         (action) => action.type.endsWith("/rejected"),

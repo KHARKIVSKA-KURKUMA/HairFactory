@@ -1,21 +1,24 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { lazy, Suspense } from "react";
+import { useEffect } from "react";
 import { GlobalStyle } from "./GlobalStyles";
 import { StyleSheetManager } from "styled-components";
 import Restricted from "./components/Routes/Restricted";
 import Private from "./components/Routes/Private";
-// const HomePage = lazy(() => import("./pages/HomePage"));
-// const LoginPage = lazy(() => import("./pages/LoginPage"));
-// const RegistrationPage = lazy(() => import("./pages/RegistrationPage"));
-// const MasterPage = lazy(() => import("./pages/MasterPage"));
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import RegistrationPage from "./pages/RegistrationPage";
 import MasterPage from "./pages/MasterPage";
 import ClientPage from "./pages/ClientPage";
 import AuthPage from "./pages/AuthPage";
+import { useDispatch } from "react-redux";
+import { fetchCurrentUser } from "./store/auth/authThunks";
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchCurrentUser());
+  }, [dispatch]);
+
   return (
     <>
       <StyleSheetManager shouldForwardProp={(prop) => prop !== "isDesktop"}>

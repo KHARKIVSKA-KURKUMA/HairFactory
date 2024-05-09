@@ -5,3 +5,7 @@ export const handleRejected = (state, { payload }) => {
 export const handlePending = (state) => {
   state.isLoading = true;
 };
+export const handleFulfilled = (state) => {
+  state.isLoading = false;
+  state.error = "";
+};

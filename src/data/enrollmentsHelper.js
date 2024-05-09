@@ -53,6 +53,18 @@ function extractDateString(inputDateString) {
   return `${year}-${month}-${day}`;
 }
 
+function convertTimeTo24HourFormat(timeString) {
+  const [timePart, period] = timeString.split(" ");
+  const [hours, minutes] = timePart.split(":").map(Number);
+  let hour24 = hours;
+  if (period === "PM" && hours < 12) {
+    hour24 = hours + 12;
+  } else if (period === "AM" && hours === 12) {
+    hour24 = 0;
+  }
+  return hour24;
+}
+
 export {
   DateFormat,
   findMasterById,
@@ -60,5 +72,6 @@ export {
   findMasterByEmail,
   availableHours,
   extractDateString,
+  convertTimeTo24HourFormat,
   convertToTimeFormat,
 };
