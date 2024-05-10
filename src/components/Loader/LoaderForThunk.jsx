@@ -1,6 +1,7 @@
 import { Oval } from "react-loader-spinner";
 import styled from "styled-components";
 import { lightOrange, lightRed } from "../../utils/colors";
+import { useTranslation } from "react-i18next";
 
 const LoaderWrap = styled.div`
   min-height: calc(100vh - 300px);
@@ -16,6 +17,7 @@ const LoaderWrap = styled.div`
 `;
 
 const LoaderForThunk = () => {
+  const { t } = useTranslation();
   return (
     <LoaderWrap>
       <Oval
@@ -30,7 +32,7 @@ const LoaderForThunk = () => {
         strokeWidth={2}
         strokeWidthSecondary={2}
       />
-      <p> Loading...</p>
+      <p> {t("loader")}</p>
     </LoaderWrap>
   );
 };

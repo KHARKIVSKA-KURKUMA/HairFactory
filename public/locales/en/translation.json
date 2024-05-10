@@ -135,5 +135,6 @@
     "descr": "Are you sure you want to log out? Logging out will end your current session, and you'll need to sign in again to access your account.",
     "agree": "Agree",
     "disagree": "Disagree"
-  }
+  },
+  "loader": "Loading..."
 }

@@ -17,6 +17,8 @@ const AuthPage = () => {
         return "/master";
       case "client":
         return "/client";
+      case "admin":
+        return "/admin";
       default:
         return "/client";
     }

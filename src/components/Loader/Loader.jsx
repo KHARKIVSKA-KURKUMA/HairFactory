@@ -1,6 +1,7 @@
 import { Triangle } from "react-loader-spinner";
 import styled from "styled-components";
 import { lightOrange } from "../../utils/colors";
+import { useTranslation } from "react-i18next";
 
 const LoaderWrap = styled.div`
   min-height: 100dvh;
@@ -16,6 +17,7 @@ const LoaderWrap = styled.div`
 `;
 
 const Loader = () => {
+  const { t } = useTranslation();
   return (
     <LoaderWrap>
       <Triangle
@@ -27,7 +29,7 @@ const Loader = () => {
         wrapperClassName="loaderWrap"
         visible={true}
       />
-      <p> Loading...</p>
+      <p> {t("loader")}</p>
     </LoaderWrap>
   );
 };
