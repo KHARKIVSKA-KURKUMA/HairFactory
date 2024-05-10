@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
-import Select from "@mui/material/Select";
 import Master1 from "../../../img/ksenia.jpg";
 import Master2 from "../../../img/violeta.jpg";
 import Master3 from "../../../img/natasha.jpg";
@@ -26,6 +25,7 @@ import {
   DateInputContainer,
   Btn,
   CloseBtn,
+  StyledSelect,
 } from "./EnrollmentForm.styled";
 import { lightBlack } from "../../../utils/colors";
 import { useDispatch } from "react-redux";
@@ -122,8 +122,7 @@ const EnrollmentForm = ({ data, onClose }) => {
           <DataTimeContainer>
             <div>
               <InputLabel id="demo-simple-select-label">Time</InputLabel>
-              <Select
-                sx={{ width: "190px", height: "56px" }}
+              <StyledSelect
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
                 value={hour}
@@ -135,7 +134,7 @@ const EnrollmentForm = ({ data, onClose }) => {
                     {hour.label}
                   </MenuItem>
                 ))}
-              </Select>
+              </StyledSelect>
             </div>
             <DateInputContainer>
               <InputLabel id=""> {t("enrollments.date")}</InputLabel>

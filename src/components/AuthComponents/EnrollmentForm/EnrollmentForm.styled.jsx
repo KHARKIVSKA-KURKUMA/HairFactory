@@ -7,6 +7,8 @@ import {
   lightRed,
 } from "../../../utils/colors";
 import { SlClose } from "react-icons/sl";
+import { phone, tablet } from "../../../utils/viewpoints";
+import Select from "@mui/material/Select";
 
 const Backdrop = styled.div`
   position: fixed;
@@ -22,16 +24,7 @@ const Form = styled.form`
   flex-direction: column;
   align-items: center;
 `;
-
-const MasterWrap = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 20px;
-  gap: 15px;
-`;
 const FormContainer = styled.div`
-  width: 500px;
   margin: 0 auto;
   padding: 30px 20px;
   border: 1px solid #ccc;
@@ -43,6 +36,20 @@ const FormContainer = styled.div`
   transform: translate(-50%, -50%);
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: calc(100% - 40px);
+  max-height: 90vh;
+  overflow-y: scroll;
+  ${tablet} {
+    max-width: 500px;
+  }
+`;
+
+const MasterWrap = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  gap: 15px;
 `;
 
 const RadioLabel = styled.label`
@@ -70,7 +77,24 @@ const DateInput = styled(DatePicker)`
   border: 1px solid #ccc;
   border-radius: 4px;
   height: 56px;
-  width: 190px;
+  width: 220px;
+  ${phone} {
+    width: 180px;
+  }
+  ${tablet} {
+    width: 190px;
+  }
+`;
+
+const StyledSelect = styled(Select)`
+  height: 56px;
+  width: 220px;
+  ${phone} {
+    width: 180px;
+  }
+  ${tablet} {
+    width: 190px;
+  }
 `;
 const DataTimeContainer = styled.div`
   display: flex;
@@ -109,6 +133,7 @@ export {
   MasterWrap,
   FormContainer,
   RadioButton,
+  StyledSelect,
   RadioLabel,
   UserPic,
   Btn,

@@ -4,10 +4,14 @@ import { Container, LogOut, LogoWrap } from "./Header.styled";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { logOut } from "../../../store/auth/authThunks";
+import { useState } from "react";
+import CloseDialog from "../CloseDialog/CloseDialog";
 
 const Header = () => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
+  const [openModal, setOpen] = useState(false);
+  const handleCloseModal = () => setOpen(false);
   const handleLogout = () => {
     dispatch(logOut());
   };
@@ -16,9 +20,14 @@ const Header = () => {
       <LogoWrap to={"/"}>
         <img src={Logo} alt="Logo" />
       </LogoWrap>
-      <LogOut onClick={handleLogout}>
+      <LogOut onClick={() => setOpen(true)}>
         <CiLogout size={20} /> {t("enrollments.logout")}
       </LogOut>
+      <CloseDialog
+        open={openModal}
+        onClose={handleCloseModal}
+        handleLogout={handleLogout}
+      />
     </Container>
   );
 };

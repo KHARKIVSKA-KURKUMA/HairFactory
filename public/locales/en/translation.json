@@ -130,5 +130,10 @@
     "context": "If you're certain about deleting your enrollment, click the 'Agree' button below. If you have any concerns or would like assistance, feel free to contact our support team. Thank you for using our platform.",
     "agree": "Agree",
     "disagree": "Disagree"
+  },
+  "logoutDialog": {
+    "descr": "Are you sure you want to log out? Logging out will end your current session, and you'll need to sign in again to access your account.",
+    "agree": "Agree",
+    "disagree": "Disagree"
   }
 }
