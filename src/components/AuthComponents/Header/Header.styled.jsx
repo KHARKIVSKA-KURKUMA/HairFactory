@@ -6,6 +6,7 @@ import {
   lightRed,
 } from "../../../utils/colors";
 import { desktop } from "../../../utils/viewpoints";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   display: flex;
@@ -20,7 +21,7 @@ const Container = styled.div`
     padding: 32px 15px;
   }
 `;
-const LogoWrap = styled.div`
+const LogoWrap = styled(Link)`
   svg {
     fill: ${lightBlack};
   }

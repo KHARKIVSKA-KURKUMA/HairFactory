@@ -13,7 +13,7 @@ const Header = () => {
   };
   return (
     <Container>
-      <LogoWrap>
+      <LogoWrap to={"/"}>
         <img src={Logo} alt="Logo" />
       </LogoWrap>
       <LogOut onClick={handleLogout}>

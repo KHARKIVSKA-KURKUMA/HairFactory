@@ -120,5 +120,15 @@
     "enroll": "Enroll",
     "select": "Select a date",
     "update": "Update"
+  },
+  "deleteDialog": {
+    "title": "Confirm enrollment deletion",
+    "descr": "Are you sure you want to delete your enrollment? This action is irreversible and will permanently remove your enrollment from our platform. Please consider the following before proceeding:",
+    "item1": "Once deleted, your enrollment cannot be recovered.",
+    "item2": "Any ongoing interactions or inquiries related to your enrollment will be lost.",
+    "item3": "If your enrollment has a duration or expiration date, deleting it will end the promotion prematurely.",
+    "context": "If you're certain about deleting your enrollment, click the 'Agree' button below. If you have any concerns or would like assistance, feel free to contact our support team. Thank you for using our platform.",
+    "agree": "Agree",
+    "disagree": "Disagree"
   }
 }

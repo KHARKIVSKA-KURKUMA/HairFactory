@@ -24,10 +24,12 @@ import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import EnrollmentForm from "../EnrollmentForm/EnrollmentForm";
 import { deleteEnrollmentsThunk } from "../../../store/enrollments/enrollmentsThunk";
+import DeleteDialog from "../DeleteDialog/DeleteDialog";
 
 const EnrollmentItem = ({ enrolment }) => {
   const { master, phone, enrolmentDate, enrolmentTime, ownerInfo } = enrolment;
   const [isOpen, setIsOpen] = useState(false);
+  const [open, setOpen] = useState(false);
   const role = useSelector(getUserRole);
   const dispatch = useDispatch();
   const { t } = useTranslation();
@@ -47,7 +49,7 @@ const EnrollmentItem = ({ enrolment }) => {
               </Btn>
             </li>
             <li>
-              <Btn onClick={() => handleDelete(enrolment._id)}>
+              <Btn onClick={() => setOpen(true)}>
                 <GiTrashCan size={28} color={lightBlack} />
               </Btn>
             </li>
@@ -74,6 +76,12 @@ const EnrollmentItem = ({ enrolment }) => {
       {isOpen && (
         <EnrollmentForm onClose={() => setIsOpen(false)} data={enrolment} />
       )}
+      <DeleteDialog
+        open={open}
+        id={enrolment._id}
+        onClose={() => setOpen(false)}
+        onAgree={handleDelete}
+      />
     </>
   );
 };

@@ -37,7 +37,7 @@ const SignUp = () => {
     setUsername("");
     dispatch(
       register({
-        name: username,
+        username,
         email,
         password,
       })
