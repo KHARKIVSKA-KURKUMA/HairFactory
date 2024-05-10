@@ -12,6 +12,7 @@ import ClientPage from "./pages/ClientPage";
 import AuthPage from "./pages/AuthPage";
 import { useDispatch } from "react-redux";
 import { fetchCurrentUser } from "./store/auth/authThunks";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   const dispatch = useDispatch();
@@ -21,6 +22,7 @@ function App() {
 
   return (
     <>
+      <ToastContainer autoClose={2500} theme="colored" />
       <StyleSheetManager shouldForwardProp={(prop) => prop !== "isDesktop"}>
         <GlobalStyle />
         <BrowserRouter basename={import.meta.env.DEV ? "/" : "/HairFactory/"}>

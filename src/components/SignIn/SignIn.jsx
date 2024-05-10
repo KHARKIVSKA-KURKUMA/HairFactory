@@ -27,6 +27,7 @@ const SignIn = () => {
   const emailRegExp = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
   const { t } = useTranslation();
   const dispatch = useDispatch();
+
   /* -------------------------------------------------------------------------- */
   const handleSubmit = (e) => {
     e.preventDefault();

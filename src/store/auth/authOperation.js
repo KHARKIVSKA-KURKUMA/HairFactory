@@ -1,6 +1,6 @@
 export const handleRejected = (state, { payload }) => {
-  state.error = payload;
   state.isLoading = false;
+  state.error = payload;
 };
 export const handlePending = (state) => {
   state.isLoading = true;

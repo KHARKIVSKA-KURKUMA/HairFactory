@@ -29,6 +29,7 @@ const authSlice = createSlice({
         state.isLoading = false;
       })
       .addMatcher((action) => action.type.endsWith("/rejected"), handleRejected)
+
       .addMatcher(isAnyOf(register.pending, logIn.pending), handlePending)
       .addMatcher(isAnyOf(register.fulfilled, logIn.fulfilled), handleFulfilled)
       .addMatcher(
