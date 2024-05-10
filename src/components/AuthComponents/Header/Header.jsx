@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { logOut } from "../../../store/auth/authThunks";
 import { useState } from "react";
 import CloseDialog from "../CloseDialog/CloseDialog";
+import LangSwitcher from "../../HomePage/LangSwitcher/LangSwitcher";
 
 const Header = () => {
   const { t } = useTranslation();
@@ -20,6 +21,7 @@ const Header = () => {
       <LogoWrap to={"/"}>
         <img src={Logo} alt="Logo" />
       </LogoWrap>
+      <LangSwitcher />
       <LogOut onClick={() => setOpen(true)}>
         <CiLogout size={20} /> {t("enrollments.logout")}
       </LogOut>
