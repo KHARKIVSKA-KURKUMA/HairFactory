@@ -125,10 +125,12 @@ const Description = styled.p`
     text-align: left;
   }
 `;
-const MoreBtn = styled.button`
+const MoreBtn = styled.a`
   background-color: ${lightRed};
   color: ${desertStorm};
   padding: 10px 40px;
+  border-radius: 24px;
+  cursor: pointer;
   ${phone} {
     font-size: 25px;
   }

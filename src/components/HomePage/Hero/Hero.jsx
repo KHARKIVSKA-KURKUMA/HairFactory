@@ -27,7 +27,7 @@ const Hero = () => {
       <HeroWrap>
         <Title>{t("home.hero.title")}</Title>
         <Description>{t("home.hero.descr")}</Description>
-        <MoreBtn type="button">{t("home.hero.button")}</MoreBtn>
+        <MoreBtn href="#stock">{t("home.hero.button")}</MoreBtn>
       </HeroWrap>
     </Container>
   );
